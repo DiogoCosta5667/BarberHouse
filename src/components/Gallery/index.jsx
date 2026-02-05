@@ -41,7 +41,6 @@ function Gallery() {
             </p>
           </div>
         )}
-        </div>
       </div>
 
       {selectedImage && (
