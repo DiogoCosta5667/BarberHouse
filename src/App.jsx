@@ -7,6 +7,7 @@ import Gallery from './components/Gallery'
 import About from './components/About'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import LoadingScreen from './components/LoadingScreen'
 import './styles/App.css'
 
 function App() {
@@ -17,16 +18,19 @@ function App() {
   }, [])
 
   return (
-    <div className={`app ${isVisible ? 'visible' : ''}`}>
-      <Header />
-      <Hero />
-      <About />
-      <Services />
-      <OurSpace />
-      <Gallery />
-      <Contact />
-      <Footer />
-    </div>
+    <>
+      <LoadingScreen />
+      <div className={`app ${isVisible ? 'visible' : ''}`}>
+        <Header />
+        <Hero />
+        <About />
+        <Services />
+        <OurSpace />
+        <Gallery />
+        <Contact />
+        <Footer />
+      </div>
+    </>
   )
 }
 
