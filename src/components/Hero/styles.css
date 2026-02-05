@@ -10,6 +10,30 @@
   overflow: hidden;
 }
 
+body.light-mode .hero {
+  background: linear-gradient(135deg, #e8e8e8 0%, #d4d4d4 100%);
+  background-image: url('/images/logo-simbolo.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 40%;
+  opacity: 1;
+}
+
+body.light-mode .hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(232, 232, 232, 0.7);
+  z-index: 1;
+}
+
+body.light-mode .hero-content {
+  z-index: 10;
+}
+
 .hero-overlay {
   position: absolute;
   top: 0;
