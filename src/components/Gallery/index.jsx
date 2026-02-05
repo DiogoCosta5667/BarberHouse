@@ -4,20 +4,20 @@ import './styles.css'
 function Gallery() {
   const [selectedImage, setSelectedImage] = useState(null)
 
-  // Imagens da galeria BarberHouse
+  // Fotos do estabelecimento BarberHouse
   const images = [
-    { id: 1, src: '/images/gallery1.jpg', alt: 'Trabalho BarberHouse 1' },
-    { id: 2, src: '/images/gallery2.jpg', alt: 'Trabalho BarberHouse 2' },
-    { id: 3, src: '/images/gallery3.jpg', alt: 'Trabalho BarberHouse 3' },
-    { id: 4, src: '/images/gallery4.jpg', alt: 'Trabalho BarberHouse 4' },
+    { id: 1, src: '/images/gallery1.jpg', alt: 'Espaço BarberHouse' },
+    { id: 2, src: '/images/gallery2.jpg', alt: 'Interior da Barbearia' },
+    { id: 3, src: '/images/gallery3.jpg', alt: 'Ambiente Acolhedor' },
+    { id: 4, src: '/images/gallery4.jpg', alt: 'Instalações BarberHouse' },
   ]
 
   return (
     <section id="gallery" className="gallery">
       <div className="container">
         <div className="section-header">
-          <h2 className="section-title">Nosso Trabalho</h2>
-          <p className="section-subtitle">Veja alguns dos nossos melhores trabalhos</p>
+          <h2 className="section-title">Nosso Espaço</h2>
+          <p className="section-subtitle">Conheça o ambiente acolhedor da BarberHouse</p>
         </div>
         
         <div className="gallery-grid">

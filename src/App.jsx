@@ -19,9 +19,9 @@ function App() {
     <div className={`app ${isVisible ? 'visible' : ''}`}>
       <Header />
       <Hero />
+      <About />
       <Services />
       <Gallery />
-      <About />
       <Contact />
       <Footer />
     </div>

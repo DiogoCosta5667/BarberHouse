@@ -32,9 +32,9 @@ function Header() {
           
           <nav className={`nav ${menuOpen ? 'open' : ''}`}>
             <a onClick={() => scrollToSection('hero')}>Início</a>
-            <a onClick={() => scrollToSection('services')}>Serviços</a>
-            <a onClick={() => scrollToSection('gallery')}>Galeria</a>
             <a onClick={() => scrollToSection('about')}>Sobre</a>
+            <a onClick={() => scrollToSection('services')}>Serviços</a>
+            <a onClick={() => scrollToSection('gallery')}>Nosso Espaço</a>
             <a onClick={() => scrollToSection('contact')}>Contacto</a>
           </nav>
 
