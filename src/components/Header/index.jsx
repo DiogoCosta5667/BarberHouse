@@ -1,10 +1,19 @@
 import { useState, useEffect } from 'react'
-import { FaBars, FaTimes } from 'react-icons/fa'
+import { FaBars, FaTimes, FaMoon, FaSun } from 'react-icons/fa'
 import './styles.css'
 
 function Header() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const [darkMode, setDarkMode] = useState(true)
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme')
+    if (savedTheme === 'light') {
+      setDarkMode(false)
+      document.body.classList.add('light-mode')
+    }
+  }, [])
 
   useEffect(() => {
     const handleScroll = () => {
@@ -13,6 +22,12 @@ function Header() {
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
+
+  const toggleTheme = () => {
+    setDarkMode(!darkMode)
+    document.body.classList.toggle('light-mode')
+    localStorage.setItem('theme', !darkMode ? 'dark' : 'light')
+  }
 
   const scrollToSection = (id) => {
     const element = document.getElementById(id)
@@ -37,6 +52,9 @@ function Header() {
             <a onClick={() => scrollToSection('space')}>Nosso Espaço</a>
             <a onClick={() => scrollToSection('gallery')}>Trabalhos</a>
             <a onClick={() => scrollToSection('contact')}>Contacto</a>
+            <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle theme">
+              {darkMode ? <FaSun /> : <FaMoon />}
+            </button>
           </nav>
 
           <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
