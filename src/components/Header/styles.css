@@ -36,6 +36,7 @@
 .nav {
   display: flex;
   gap: 35px;
+  align-items: center;
   animation: fadeInDown 0.8s ease 0.2s backwards;
 }
 
@@ -81,22 +82,24 @@
 }
 
 .theme-toggle {
-  background: none;
-  border: none;
+  background: rgba(212, 165, 116, 0.1);
+  border: 2px solid var(--primary-color);
   color: var(--primary-color);
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   cursor: pointer;
-  padding: 0;
-  margin-left: 20px;
+  padding: 8px 12px;
+  border-radius: 8px;
   transition: var(--transition);
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-left: 10px;
 }
 
 .theme-toggle:hover {
-  transform: rotate(20deg) scale(1.15);
-  color: var(--accent);
+  transform: rotate(20deg) scale(1.1);
+  background: var(--primary-color);
+  color: var(--dark-bg);
 }
 
 @media (max-width: 768px) {
