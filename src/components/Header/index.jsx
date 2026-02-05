@@ -46,8 +46,6 @@ function Header() {
             <Link to="/" onClick={closeMenu}>Início</Link>
             <Link to="/sobre" onClick={closeMenu}>Sobre</Link>
             <Link to="/servicos" onClick={closeMenu}>Serviços</Link>
-            <Link to="/nosso-espaco" onClick={closeMenu}>Nosso Espaço</Link>
-            <Link to="/trabalhos" onClick={closeMenu}>Trabalhos</Link>
             <Link to="/contacto" onClick={closeMenu}>Contacto</Link>
             <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle theme">
               {darkMode ? <FaSun /> : <FaMoon />}
