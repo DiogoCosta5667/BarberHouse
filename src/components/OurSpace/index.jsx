@@ -6,6 +6,8 @@ function OurSpace() {
     { id: 2, src: '/images/gallery2.jpg', alt: 'Interior da Barbearia' },
     { id: 3, src: '/images/gallery3.jpg', alt: 'Ambiente Acolhedor' },
     { id: 4, src: '/images/gallery4.jpg', alt: 'Instalações BarberHouse' },
+    { id: 5, src: '/images/gallery5.jpg', alt: 'Detalhes do Espaço' },
+    { id: 6, src: '/images/gallery6.jpg', alt: 'Ambiente Premium' },
   ]
 
   return (
