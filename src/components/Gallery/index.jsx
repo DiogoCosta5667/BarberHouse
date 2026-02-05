@@ -4,14 +4,12 @@ import './styles.css'
 function Gallery() {
   const [selectedImage, setSelectedImage] = useState(null)
 
-  // Imagens placeholder - substituir pelos caminhos reais
+  // Imagens da galeria BarberHouse
   const images = [
-    { id: 1, src: '/images/gallery1.jpg', alt: 'Corte 1' },
-    { id: 2, src: '/images/gallery2.jpg', alt: 'Corte 2' },
-    { id: 3, src: '/images/gallery3.jpg', alt: 'Corte 3' },
-    { id: 4, src: '/images/gallery4.jpg', alt: 'Corte 4' },
-    { id: 5, src: '/images/gallery5.jpg', alt: 'Corte 5' },
-    { id: 6, src: '/images/gallery6.jpg', alt: 'Corte 6' },
+    { id: 1, src: '/images/gallery1.jpg', alt: 'Trabalho BarberHouse 1' },
+    { id: 2, src: '/images/gallery2.jpg', alt: 'Trabalho BarberHouse 2' },
+    { id: 3, src: '/images/gallery3.jpg', alt: 'Trabalho BarberHouse 3' },
+    { id: 4, src: '/images/gallery4.jpg', alt: 'Trabalho BarberHouse 4' },
   ]
 
   return (
