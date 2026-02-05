@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import './styles.css'
 
 function Hero() {
@@ -21,8 +22,8 @@ function Hero() {
             Estilo, Tradição e Excelência em cada Corte
           </p>
           <div className="hero-buttons">
-            <a href="#contact" className="btn btn-primary">Marcar Horário</a>
-            <a href="#services" className="btn btn-secondary">Ver Serviços</a>
+            <Link to="/contacto" className="btn btn-primary">Marcar Horário</Link>
+            <Link to="/servicos" className="btn btn-secondary">Ver Serviços</Link>
           </div>
         </div>
       </div>
