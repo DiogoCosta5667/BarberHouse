@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import { FaBars, FaTimes, FaMoon, FaSun } from 'react-icons/fa'
 import './styles.css'
 
@@ -29,29 +30,25 @@ function Header() {
     localStorage.setItem('theme', !darkMode ? 'dark' : 'light')
   }
 
-  const scrollToSection = (id) => {
-    const element = document.getElementById(id)
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
-      setMenuOpen(false)
-    }
+  const closeMenu = () => {
+    setMenuOpen(false)
   }
 
   return (
     <header className={`header ${scrolled ? 'scrolled' : ''}`}>
       <div className="container">
         <div className="header-content">
-          <div className="logo">
+          <Link to="/" className="logo">
             <img src="/logo.png" alt="BarberHouse Logo" />
-          </div>
+          </Link>
           
           <nav className={`nav ${menuOpen ? 'open' : ''}`}>
-            <a onClick={() => scrollToSection('hero')}>Início</a>
-            <a onClick={() => scrollToSection('about')}>Sobre</a>
-            <a onClick={() => scrollToSection('services')}>Serviços</a>
-            <a onClick={() => scrollToSection('space')}>Nosso Espaço</a>
-            <a onClick={() => scrollToSection('gallery')}>Trabalhos</a>
-            <a onClick={() => scrollToSection('contact')}>Contacto</a>
+            <Link to="/" onClick={closeMenu}>Início</Link>
+            <Link to="/sobre" onClick={closeMenu}>Sobre</Link>
+            <Link to="/servicos" onClick={closeMenu}>Serviços</Link>
+            <Link to="/nosso-espaco" onClick={closeMenu}>Nosso Espaço</Link>
+            <Link to="/trabalhos" onClick={closeMenu}>Trabalhos</Link>
+            <Link to="/contacto" onClick={closeMenu}>Contacto</Link>
             <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle theme">
               {darkMode ? <FaSun /> : <FaMoon />}
             </button>
