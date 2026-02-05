@@ -23,7 +23,7 @@ function LoadingScreen() {
           <div className="pole-stripe"></div>
         </div>
         <div className="scissors-animation">
-          <div className="scissors">✂️</div>
+          <img src="/logo.png" alt="BarberHouse Logo" className="logo-animation" />
         </div>
         <h1 className="loading-title">BarberHouse</h1>
         <div className="loading-bar">
