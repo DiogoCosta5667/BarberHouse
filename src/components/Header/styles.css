@@ -6,11 +6,11 @@
   z-index: 1000;
   padding: 20px 0;
   transition: var(--transition);
-  background: transparent;
+  background: #000000;
 }
 
 .header.scrolled {
-  background: rgba(26, 26, 26, 0.95);
+  background: #000000;
   backdrop-filter: blur(10px);
   padding: 15px 0;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
