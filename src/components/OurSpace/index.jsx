@@ -1,6 +1,9 @@
+import { useState } from 'react'
 import './styles.css'
 
 function OurSpace() {
+  const [selectedImage, setSelectedImage] = useState(null)
+  
   const images = [
     { id: 1, src: '/images/gallery1.jpg', alt: 'Espaço BarberHouse' },
     { id: 2, src: '/images/gallery2.jpg', alt: 'Interior da Barbearia' },
@@ -24,15 +27,25 @@ function OurSpace() {
               key={image.id} 
               className="space-item"
               style={{ animationDelay: `${index * 0.1}s` }}
+              onClick={() => setSelectedImage(image)}
             >
               <img src={image.src} alt={image.alt} />
               <div className="space-overlay">
-                <span>{image.alt}</span>
+                <span>Ver mais</span>
               </div>
             </div>
           ))}
         </div>
       </div>
+
+      {selectedImage && (
+        <div className="lightbox" onClick={() => setSelectedImage(null)}>
+          <div className="lightbox-content">
+            <img src={selectedImage.src} alt={selectedImage.alt} />
+            <button className="lightbox-close" onClick={() => setSelectedImage(null)}>×</button>
+          </div>
+        </div>
+      )}
     </section>
   )
 }
