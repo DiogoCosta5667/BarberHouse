@@ -34,7 +34,8 @@ function Header() {
             <a onClick={() => scrollToSection('hero')}>Início</a>
             <a onClick={() => scrollToSection('about')}>Sobre</a>
             <a onClick={() => scrollToSection('services')}>Serviços</a>
-            <a onClick={() => scrollToSection('gallery')}>Nosso Espaço</a>
+            <a onClick={() => scrollToSection('space')}>Nosso Espaço</a>
+            <a onClick={() => scrollToSection('gallery')}>Trabalhos</a>
             <a onClick={() => scrollToSection('contact')}>Contacto</a>
           </nav>
 

@@ -1,0 +1,38 @@
+import './styles.css'
+
+function OurSpace() {
+  const images = [
+    { id: 1, src: '/images/gallery1.jpg', alt: 'Espaço BarberHouse' },
+    { id: 2, src: '/images/gallery2.jpg', alt: 'Interior da Barbearia' },
+    { id: 3, src: '/images/gallery3.jpg', alt: 'Ambiente Acolhedor' },
+    { id: 4, src: '/images/gallery4.jpg', alt: 'Instalações BarberHouse' },
+  ]
+
+  return (
+    <section id="space" className="our-space">
+      <div className="container">
+        <div className="section-header">
+          <h2 className="section-title">Nosso Espaço</h2>
+          <p className="section-subtitle">Conheça o ambiente acolhedor da BarberHouse</p>
+        </div>
+        
+        <div className="space-grid">
+          {images.map((image, index) => (
+            <div 
+              key={image.id} 
+              className="space-item"
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
+              <img src={image.src} alt={image.alt} />
+              <div className="space-overlay">
+                <span>{image.alt}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+export default OurSpace

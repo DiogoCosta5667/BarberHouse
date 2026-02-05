@@ -4,36 +4,43 @@ import './styles.css'
 function Gallery() {
   const [selectedImage, setSelectedImage] = useState(null)
 
-  // Fotos do estabelecimento BarberHouse
+  // Fotos dos cortes - adicionar imagens aqui
   const images = [
-    { id: 1, src: '/images/gallery1.jpg', alt: 'Espaço BarberHouse' },
-    { id: 2, src: '/images/gallery2.jpg', alt: 'Interior da Barbearia' },
-    { id: 3, src: '/images/gallery3.jpg', alt: 'Ambiente Acolhedor' },
-    { id: 4, src: '/images/gallery4.jpg', alt: 'Instalações BarberHouse' },
+    // Exemplo: { id: 1, src: '/images/corte1.jpg', alt: 'Corte Moderno' },
+    // Adiciona as tuas fotos de cortes aqui
   ]
 
   return (
     <section id="gallery" className="gallery">
       <div className="container">
         <div className="section-header">
-          <h2 className="section-title">Nosso Espaço</h2>
-          <p className="section-subtitle">Conheça o ambiente acolhedor da BarberHouse</p>
+          <h2 className="section-title">Nossos Trabalhos</h2>
+          <p className="section-subtitle">Veja alguns dos nossos melhores cortes</p>
         </div>
         
-        <div className="gallery-grid">
-          {images.map((image, index) => (
-            <div 
-              key={image.id} 
-              className="gallery-item"
-              style={{ animationDelay: `${index * 0.1}s` }}
-              onClick={() => setSelectedImage(image)}
-            >
-              <img src={image.src} alt={image.alt} />
-              <div className="gallery-overlay">
-                <span>Ver mais</span>
+        {images.length > 0 ? (
+          <div className="gallery-grid">
+            {images.map((image, index) => (
+              <div 
+                key={image.id} 
+                className="gallery-item"
+                style={{ animationDelay: `${index * 0.1}s` }}
+                onClick={() => setSelectedImage(image)}
+              >
+                <img src={image.src} alt={image.alt} />
+                <div className="gallery-overlay">
+                  <span>Ver mais</span>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+        ) : (
+          <div style={{ textAlign: 'center', padding: '60px 20px' }}>
+            <p style={{ color: '#aaa', fontSize: '1.2rem' }}>
+              Em breve adicionaremos fotos dos nossos trabalhos!
+            </p>
+          </div>
+        )}
         </div>
       </div>
 
