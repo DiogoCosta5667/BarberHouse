@@ -13,7 +13,7 @@
 body.light-mode {
   --dark-bg: #f5f5f5;
   --light-bg: #ffffff;
-  --text-light: #333333;
+  --text-light: #1a1a1a;
   --text-dark: #ffffff;
 }
 
@@ -41,7 +41,7 @@ body.light-mode .info-card p,
 body.light-mode .stat-label,
 body.light-mode .section-subtitle,
 body.light-mode .footer-section p {
-  color: #666;
+  color: #333;
 }
 
 body.light-mode .footer {
